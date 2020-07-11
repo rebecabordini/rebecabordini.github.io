@@ -1,43 +1,99 @@
+/* Global Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+  
+html,
 body {
-    margin: 60px auto;
-    width: 70%;
+  height: 100%;
 }
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
+  
+body {
+  background: #71717b;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+  
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 30px 160px 8px 160px 8px 160px 30px);
+  grid-template-rows: repeat(49, 828px);
+  margin-left: 1rem;
+  grid-row-gap: 1rem;
 }
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  line-height: 1.1;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+h6 {
+  line-height: 1;
+  grid-row-start: 7;
+  grid-row-end: 8;
+  -ms-flex-item-align: end;
+  align-self: end;
 }
 
-ul.posts li {
-    list-style: none;
+article {
+  line-height: 18.2px;
+  grid-row-start: 2;
+  grid-row-end: 8;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 30px 160px 8px 160px 8px 160px 30px;
+  grid-template-rows: 22px repeat(6, 120px) 22px;
+  grid-row-gap: 8px;
+  border: 1px solid #000;
+}
+
+.page-left {
+  grid-column-start: 1;
+  grid-column-end: 8;
+}
+
+.page-right {
+  grid-column-start: 8;
+  grid-column-end: 15;
+}
+
+.left {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+.right {
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+
+.ninety {
+  text-transform: uppercase;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  font-size: 34px;
+  color: #fff;
+}
+
+.italic {
+  font-style: italic;
+}
+
+ul {
+  list-style: none;
 }
